@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    background-color: rgba(74, 75, 75, 0.431);
+}
+
+.row::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.row .col {
+    float: left;
+    width: 22%;
+    margin: 10px;
+    cursor: pointer;
+    /* cursor: url(http://www.javascriptkit.com/dhtmltutors/cursor-hand.gif), auto;; */
+}
+
+.row .col .image {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.row .col .image img {
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    height: 350px;
+}
+
+.row .col .description {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+    border-radius: 0px 0px 10px 10px;
+    background-color: rgba(107, 103, 103, 0.678);
+}
+
+.row .col .image.blur,
+.row .col .image.brightness,
+.row .col .image.contrast,
+.row .col .image .drop-shadow,
+.row .col .image .greyscale,
+.row .col .image .invert,
+.row .col .image .opacity,
+.row .col .image .saturate,
+.row .col .image .sepia,
+.row .col .image .hue-rotate {
+    transition: .3s all ease-in-out;
+}
+.row .col .image.blur:hover,
+.row .col .image.brightness:hover,
+.row .col .image.contrast:hover,
+.row .col .image .drop-shadow:hover,
+.row .col .image .greyscale:hover,
+.row .col .image .invert:hover,
+.row .col .image .opacity:hover,
+.row .col .image .saturate:hover,
+.row .col .image .sepia:hover,
+.row .col .image .hue-rotate:hover {
+    transition: 2s all ease-in-out;
+}
+.row .col .image.blur:hover {
+    filter: blur(50px);
+}
+.row .col .image.brightness:hover {
+    filter: brightness(40%);
+}
+.row .col .image.contrast:hover {
+    filter: contrast(40%);
+}
+.row .col .image.drop-shadow:hover {
+    filter: drop-shadow(20px 20px 20px #1a1a1b);
+}
+.row .col .image.greyscale:hover {
+    filter: grayscale(60%);
+}
+.row .col .image.invert:hover {
+    filter: invert(0.30);
+}
+.row .col .image.opacity:hover {
+    filter: opacity(60%);
+}
+.row .col .image.saturate:hover {
+    filter: saturate(40%);
+}
+.row .col .image.sepia:hover {
+    filter: sepia(40%);
+}
+.row .col .image.hue-rotate:hover {
+    filter: hue-rotate(-0.25turn)
+}
+.row .col .description {
+    opacity: 20%;
+    transition: 0.3s all ease-in-out;
+}
+.row .col .image:hover ~ .description {
+    opacity: 100%;
+    letter-spacing: 3px;
+    font-weight: bold;
+    transition: 2s all ease-in-out;
+}
+
+/* Screen breakpoints
+320px — 480px: Mobile devices.
+481px — 768px: iPads, Tablets.
+769px — 1024px: Small screens, laptops.
+1025px — 1200px: Desktops, large screens.
+1201px and more — Extra large screens, TV. */
+
+@media screen and (min-width: 320px) and (max-width: 490px) {
+    .row .col {
+        float: none;
+        width: 93%;
+        margin: 20px 10px;
+    }
+}
+@media screen and (min-width: 491px) and (max-width: 768px) {
+    .row .col {
+        width: 45%;
+        margin: 20px 12px;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .row .col {
+        width: 30%;
+        margin: 20px 12px;
+    }
+}
